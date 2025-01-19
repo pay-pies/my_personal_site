@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
+<title>pay-pies' site</title>
+<link rel="icon" type="image/x-icon" href="https://cloud-mh5xh24te-hack-club-bot.vercel.app/0image-removebg-preview.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
@@ -150,7 +152,7 @@
         color: rgb(79, 79, 79);
     }
 
-    button{
+    .buttons button{
         margin-bottom: 10px;
         background-color: rgb(100, 100, 100);
         border: none;
@@ -164,7 +166,7 @@
         cursor: pointer;
     }
 
-    button:hover{
+    .buttons button:hover{
         margin-bottom: 10px;
         background-color: rgb(127, 127, 127);
         border: none;
@@ -178,7 +180,7 @@
         cursor: pointer;
     }
 
-    .dark-mode button{
+    .dark-mode .buttons button{
         margin-bottom: 10px;
         background-color: rgb(241, 241, 241);
         border: 2px solid rgb(122, 143, 118);
@@ -192,7 +194,7 @@
         cursor: pointer;
     }
 
-    .dark-mode button:hover{
+    .dark-mode .buttons button:hover{
         margin-bottom: 10px;
         background-color: rgb(216, 216, 216);
         border: 2px solid rgb(122, 143, 118);
@@ -206,16 +208,74 @@
         cursor: pointer;
     }
 
+    .navbar {
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        }
+
+    .dark-mode .navbar {
+        overflow: hidden;
+        background-color: rgb(208, 237, 203);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        }        
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+    .dark-mode .navbar a{
+        float: left;
+        display: block;
+        color: rgb(79, 79, 79);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+    .navbar a:hover {
+        background: #f1f1f1;
+        color: black;
+        }
+    
+    .dark-mode .navbar a:hover{
+        background: rgb(122, 143, 118);
+        color: white;
+    }    
+
+    .main{
+        margin-top: 50px;
+    }
+
 </style>
 </head>
 <body>
 
-<button id="btn12" onclick="myFunction()">Light | Dark Mode</button>    
+<div class="navbar">
+    <a href="#home">home</a>
+    <a href="#about">about me</a>
+    <a href="#skill">skills</a>
+    <a href="#proj">projects</a>
+    <a href="#soc">socials</a>
+</div>  
+<div class="main">
+<button id="btn12"onclick="myFunction()">Light | Dark Mode</button>    
 
 <div class="flex-container">
     <div class="side-text">
 
-        <h1>Welcome!</h1>
+        <h1 id="home">Welcome!</h1>
         <h3>To My Website :&#41;</h3>
     
     </div> 
@@ -229,7 +289,7 @@
 <div class="flex-container">
 <div class="side-text">
 
-    <h1>I Am Peipei (@pay-pies)</h1>
+    <h1 id="about">I Am Peipei (@pay-pies)</h1>
     <h3>A 11-year-old student learning the basics of programming.</h3>
 </div>
 
@@ -242,7 +302,7 @@
 <div class="flex-container">
     <div class="side-text">
     
-        <h1>Skills</h1>
+        <h1 id="skill">Skills</h1>
         <h3>I can do the basics of Python 3, HTML 5 and CSS 3.</h3>
     </div>
     
@@ -255,7 +315,7 @@
 <div class="flex-container">
     <div class="side-text">
     
-        <h1>High Seas Projects</h1>
+        <h1 id="proj">High Seas Projects</h1>
         <ul>
             <li>Useful Learning Sites - <a href="https://github.com/pay-pies/usefullearningsites/">Github Repo</a>, <a href="https://pay-pies.neetocode.com/site/qingrui-xie/01JG9A0RKKZ7RV98PKJESCHBG5">Demo</a></li>
             <li>A Guide To Cubing - <a href="https://github.com/pay-pies/guidetocubing">Github Repo</a>, <a href="https://pay-pies.neetocode.com/site/qingrui-xie/01JFJTXMK0JJY6G4M635BKAN1D">Demo</a></li>
@@ -275,7 +335,7 @@
 <div class="flex-container">
     <div class="side-text">
     
-        <h1>Socials</h1>
+        <h1 id="soc">Socials</h1>
         <div class="buttons">
 
         <button><a href="https://github.com/pay-pies"><i class="fa fa-github"></i> Github Profile</a></button>
@@ -292,6 +352,7 @@
 </div> 
 
 <h3>- pay-pies 2025</h3>
+</div>
 <script>
 
 function myFunction() {
