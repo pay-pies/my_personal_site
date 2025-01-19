@@ -10,7 +10,7 @@ I used Vanilla HTML and CSS and Javascript within the style and script tags, edi
 - Switch between light and dark modes
 - Just look at it I suppose.
 
-Time spent: 4 hours 8 minutes 🟢->🟨<-🔴 (least time-consuming to most)
+Time spent: 4 hours 10 minutes 🟢->🟨<-🔴 (least time-consuming to most)
 
 ## Credits:
 - Most of the dark mode javascript code: w3schools
