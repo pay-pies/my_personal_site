@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+    body{
+        padding: 25px;
+        background-color: white;
+        color: #333333;
+        font-family: monospace;
+        overflow-x: hidden;
+    }
+
+    .dark-mode{
+        background-color: #333333;
+        color: white;
+    }
+
+    .dark-mode p, .dark-mode h3 , .dark-mode a{
+        color: rgb(208, 237, 203);
+    }
+
+    #btn12 {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation
+  }
+  
+    #btn12::after,
+    #btn12::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -99999;
+        transition: all 0.4s;
+    }
+    
+    #btn12::before {
+        transform: translate(0%, 0%);
+        width: 100%;
+        height: 100%;
+        background: #28282d;
+        border-radius: 10px;
+    }
+    
+    #btn12::after {
+        transform: translate(10px, 10px);
+        width: 35px;
+        height: 35px;
+        background: #ffffff15;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-radius: 50px;
+    }
+    
+    #btn12:hover::before {
+        transform: translate(5%, 20%);
+        width: 110%;
+        height: 110%;
+    }
+    
+    #btn12:hover::after {
+        border-radius: 10px;
+        transform: translate(0, 0);
+        width: 100%;
+        height: 100%;
+    }
+    
+    #btn12:active::after {
+        transition: 0s;
+        transform: translate(0, 5%);
+    }
+
+    
+    .side-text{
+        float: right;
+        text-align: center;
+        /*margin-top: 100px;*/
+        margin-left: 100px;
+        margin-right: 275px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .side-images{
+        /*float: left;*/
+        margin: 50px;
+        padding-left: 75px;
+    }
+
+    h1{
+        font-size: 50px;
+        margin-top: 70px;
+    }
+
+    h1, h3, ul{
+        font-weight: 200;
+        margin-left: 200px;
+        width: 100%;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+}
+
+    #m{
+        padding-left: 75px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .buttons{
+        align-items: center;
+        margin-left: 180px;
+    }
+
+    .buttons a{
+        color: white;
+        font-family: monospace;
+        font-weight: 100;
+    }
+
+    .dark-mode .buttons a{
+        color: rgb(79, 79, 79);
+    }
+
+    button{
+        margin-bottom: 10px;
+        background-color: rgb(100, 100, 100);
+        border: none;
+        border-radius: 12px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    button:hover{
+        margin-bottom: 10px;
+        background-color: rgb(127, 127, 127);
+        border: none;
+        border-radius: 12px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .dark-mode button{
+        margin-bottom: 10px;
+        background-color: rgb(241, 241, 241);
+        border: 2px solid rgb(122, 143, 118);
+        border-radius: 12px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .dark-mode button:hover{
+        margin-bottom: 10px;
+        background-color: rgb(216, 216, 216);
+        border: 2px solid rgb(122, 143, 118);
+        border-radius: 12px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+<body>
+
+<button id="btn12" onclick="myFunction()">Light | Dark Mode</button>    
+
+<div class="flex-container">
+    <div class="side-text">
+
+        <h1>Welcome!</h1>
+        <h3>To My Website :&#41;</h3>
+    
+    </div> 
+    
+    <div class="side-images">
+        <img src="https://i.pinimg.com/736x/66/6a/70/666a70c66b9bfbea3d493209145edbbf.jpg" height="300">
+    
+    </div>
+</div>
+
+<div class="flex-container">
+<div class="side-text">
+
+    <h1>I Am Peipei (@pay-pies)</h1>
+    <h3>A 11-year-old student learning the basics of programming.</h3>
+</div>
+
+<div class="side-images">
+    <img src="https://i.pinimg.com/736x/55/6e/69/556e691c7b74c196705fdd82c9fc3886.jpg" height="300">
+
+</div>
+</div>
+
+<div class="flex-container">
+    <div class="side-text">
+    
+        <h1>Skills</h1>
+        <h3>I can do the basics of Python 3, HTML 5 and CSS 3.</h3>
+    </div>
+    
+    <div class="side-images">
+        <img src="https://i.pinimg.com/736x/20/c1/2c/20c12c14e68141891e385b5a58d6df23.jpg" height="300">
+    
+    </div>
+    </div>
+
+<div class="flex-container">
+    <div class="side-text">
+    
+        <h1>High Seas Projects</h1>
+        <ul>
+            <li>Useful Learning Sites - <a href="https://github.com/pay-pies/usefullearningsites/">Github Repo</a>, <a href="https://pay-pies.neetocode.com/site/qingrui-xie/01JG9A0RKKZ7RV98PKJESCHBG5">Demo</a></li>
+            <li>A Guide To Cubing - <a href="https://github.com/pay-pies/guidetocubing">Github Repo</a>, <a href="https://pay-pies.neetocode.com/site/qingrui-xie/01JFJTXMK0JJY6G4M635BKAN1D">Demo</a></li>
+            <li>Animal Group Names - <a href="https://github.com/pay-pies/animalnamesydk">Github Repo</a>, <a href="https://pay-pies.neetocode.com/site/qingrui-xie/01JFQZVQ4YEF3VC08B14ZHHMD2">Demo</a></li>
+            <li>How To Vanilla HTML/CSS - <a href="https://github.com/pay-pies/howtovanillahtml">Github Repo</a>, <a href="https://howtovanillahtml.vercel.app/2">Demo</a></li>
+            <li>Countdown To The End Of High Seas - <a href="https://github.com/pay-pies/count_to_the_end">Github Repo</a>, <a href="https://pay-pies.neetocode.com/site/qingrui-xie/01JGPEA1E1GD9DBCMQPCR6J0AB">Demo</a></li>
+
+        </ul>
+    </div>
+    
+    <div class="side-images">
+        <img id="m" src="https://i.pinimg.com/736x/98/9e/6d/989e6d72206a4ddcc031449af153ef9e.jpg" height="300">
+    
+    </div>
+</div>  
+
+<div class="flex-container">
+    <div class="side-text">
+    
+        <h1>Socials</h1>
+        <div class="buttons">
+
+        <button><a href="https://github.com/pay-pies"><i class="fa fa-github"></i> Github Profile</a></button>
+        <button><a href="https://app.slack.com/client/T0266FRGM/D07UMUZB35Y">Chat With Me on Slack</a></button>        
+        </div>
+        <h3>Roblox Username - oattoastd</h3>
+        
+    </div>
+    
+    <div class="side-images">
+        <img id="m" src="https://i.pinimg.com/736x/43/a6/31/43a6310fc910e68fda81df044d758981.jpg" width="300">
+    
+    </div>
+</div> 
+
+<h3>- pay-pies 2025</h3>
+<script>
+
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
+
+</script>
+</body>    
+</html>
